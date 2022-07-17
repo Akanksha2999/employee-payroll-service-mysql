@@ -20,7 +20,6 @@ mysql> show databases;
 
 mysql> USE payroll_service;
 Database changed
---------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 UC2 -> Created table employee_payroll into payroll_service database
@@ -44,7 +43,6 @@ mysql> DESCRIBE employee_payroll;
 | start  | date         | NO   |     | NULL    |                |
 +--------+--------------+------+-----+---------+----------------+
 4 rows in set (0.03 sec)
---------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 UC3 -> Inserted employee data in table employee_payroll of payroll_service database
@@ -56,3 +54,16 @@ mysql> INSERT INTO employee_payroll(name, salary, start) VALUES
     -> ( 'Ved', 50000.00, '2020-05-21' );
 Query OK, 3 rows affected (0.03 sec)
 Records: 3  Duplicates: 0  Warnings: 0
+
+--------------------------------------------------------------------------------
+UC4 -> Retrieved all employee data from table employee_payroll of payroll_service database
+--------------------------------------------------------------------------------
+mysql> SELECT * FROM employee_payroll;
++----+----------+--------+------------+
+| id | name     | salary | start      |
++----+----------+--------+------------+
+|  1 | Akanksha | 100000 | 2018-01-03 |
+|  2 | Mahima   | 200000 | 2019-11-13 |
+|  3 | Ved      |  50000 | 2020-05-21 |
++----+----------+--------+------------+
+3 rows in set (0.00 sec)
